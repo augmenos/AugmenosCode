@@ -4,7 +4,7 @@
 
 Augmenos Code is an educational app that showcases some of visionOS capabilities with open source code. Experience the samples interactively in-app on Apple Vision Pro and view the code alongside them. Intended for developers learning visionOS.
 
-[Download](https://apps.apple.com/app/augmenos-code/id6544806836) on the App Store.
+[Download](https://apps.apple.com/app/augmenos-code/id6544806836) on the App Store or the Xcode project in this repository.
 
 ## Frameworks
 
