@@ -2,7 +2,7 @@
 
 ![Augmenos Code Preview](/images/Simulator%20Screenshot%20-%20AVP%20Simulator%201.2%20-%202024-07-15%20at%2009.49.41.png)
 
-Augmenos Code is a simple app that showcases some of visionOS capabilities with open source code. Experience the samples interactively in-app on Apple Vision Pro and view the code alongside them. Intended for developers new to visionOS.
+Augmenos Code is an educational app that showcases some of visionOS capabilities with open source code. Experience the samples interactively in-app on Apple Vision Pro and view the code alongside them. Intended for developers learning visionOS.
 
 [Download](https://apps.apple.com/app/augmenos-code/id6544806836) on the App Store.
 
