@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ContentCodeView.swift
 //  AugmenosCode
 //
 //  Created by Miguel Garcia Gonzalez on 7/15/24.
@@ -7,10 +7,12 @@
 
 import SwiftUI
 
+struct ContentCodeView: View {
+    var body: some View {
+        Text("""
 struct ContentView: View {
-    @Environment(\.openURL) var openURL
-    @Environment(\.openWindow) private var openWindow
-    @Environment(\.dismissWindow) private var dismissWindow
+    @Environment(\\.openWindow) private var openWindow
+    @Environment(\\.dismissWindow) private var dismissWindow
 
     var body: some View {
         
@@ -19,7 +21,7 @@ struct ContentView: View {
             // Left Column
             VStack(alignment: .leading) {
                 
-                HStack(alignment: .center) {
+                HStack {
                     Image("AugmenosDeveloper_AppIcon")
                         .resizable()
                         .scaledToFit()
@@ -29,17 +31,17 @@ struct ContentView: View {
                     VStack(alignment: .leading) {
                         Text("Augmenos")
                             .font(.extraLargeTitle)
-                        Text("Code")
-                            .font(.extraLargeTitle)
+                        Text("Developer")
+                            .font(.largeTitle)
                     }
                 }
                 .padding(.bottom, 30)
                                 
-                Text("This simple app showcases some of visionOS capabilities with open source code. Experience the samples interactively in-app and view the code alongside them. Intended for developers new to visionOS.")
+                Text("This simple app showcases some of visionOS capabilities. Experience the examples interactively within the app and view the source code alongside them. Intended for beginners to visionOS.")
                                               
                 Spacer()
 
-                Text("Select sample to begin:")
+                Text("Select sample to begin learning:")
                     .bold()
                     .frame(maxWidth: .infinity, alignment: .center)
                     .padding(.bottom, 20)
@@ -70,37 +72,28 @@ struct ContentView: View {
                     openWindow(id: "HandTracking")
                 } label: {
                     Label("Immersive Space", systemImage: "visionpro")
-
                 }
-                .disabled(true)
                 .frame(maxWidth: .infinity, alignment: .center)
 
-                Text("Coming Soon")
-                    .font(.footnote)
-                    .foregroundStyle(.secondary)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                
                 Spacer()
                 
-                Text("Complete source code and downloadable project on GitHub:")
+                Text("Complete source code and downloadable project on GitHub.")
                     .foregroundStyle(.secondary)
                     .padding(.bottom, 20)
                 
                 HStack(spacing: 30) {
                     
-                    // About Sheet
+                    // Open About Sheet
                     Button{
-                        if let URL = URL(string: "https://www.augmenos.com/about") {
-                            UIApplication.shared.open(URL, options: [:], completionHandler: nil) }
+                        openWindow(id: "Model3D")
                     } label: {
                         Label("About", systemImage: "info.circle.fill")
                             .foregroundStyle(.secondary)
                     }
                     
-                    // GitHub URL
+                    // Open Safari, GitHub URL
                     Button{
-                        if let URL = URL(string: "https://github.com/augmenos") {
-                            UIApplication.shared.open(URL, options: [:], completionHandler: nil) }
+                        openWindow(id: "HandTracking")
                     } label: {
                         Label("GitHub", systemImage: "safari.fill")
                             .foregroundStyle(.secondary)
@@ -110,7 +103,6 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity, alignment: .center)
 
             }
-            .frame(maxWidth: 500)
             .padding()
             
             // Right Column
@@ -127,3 +119,10 @@ struct ContentView: View {
         .padding(40)
     }
 }
+
+""")
+        //                .foregroundStyle(.secondary)
+        .fontDesign(.monospaced)
+    }
+}
+

@@ -13,6 +13,14 @@
 		D43255622C455AC2008CCE1F /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43255612C455AC2008CCE1F /* ImmersiveView.swift */; };
 		D43255642C455AC4008CCE1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D43255632C455AC4008CCE1F /* Assets.xcassets */; };
 		D43255672C455AC4008CCE1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D43255662C455AC4008CCE1F /* Preview Assets.xcassets */; };
+		D43255722C455CB8008CCE1F /* ContentCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43255712C455CB8008CCE1F /* ContentCodeView.swift */; };
+		D43255742C455CC8008CCE1F /* Model3DView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43255732C455CC8008CCE1F /* Model3DView.swift */; };
+		D43255762C455CE1008CCE1F /* Model3DCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43255752C455CE1008CCE1F /* Model3DCodeView.swift */; };
+		D43255782C455CF4008CCE1F /* DragRotationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43255772C455CF4008CCE1F /* DragRotationModifier.swift */; };
+		D432557A2C455D15008CCE1F /* HandTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43255792C455D15008CCE1F /* HandTrackingView.swift */; };
+		D432557C2C455D8A008CCE1F /* ImmersiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432557B2C455D8A008CCE1F /* ImmersiveViewModel.swift */; };
+		D432557E2C455DA0008CCE1F /* ModelEntity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432557D2C455DA0008CCE1F /* ModelEntity+Extension.swift */; };
+		D43255802C455DB0008CCE1F /* HandTrackingCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432557F2C455DB0008CCE1F /* HandTrackingCodeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		D43255632C455AC4008CCE1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D43255662C455AC4008CCE1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D43255682C455AC4008CCE1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D43255712C455CB8008CCE1F /* ContentCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCodeView.swift; sourceTree = "<group>"; };
+		D43255732C455CC8008CCE1F /* Model3DView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model3DView.swift; sourceTree = "<group>"; };
+		D43255752C455CE1008CCE1F /* Model3DCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model3DCodeView.swift; sourceTree = "<group>"; };
+		D43255772C455CF4008CCE1F /* DragRotationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragRotationModifier.swift; sourceTree = "<group>"; };
+		D43255792C455D15008CCE1F /* HandTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandTrackingView.swift; sourceTree = "<group>"; };
+		D432557B2C455D8A008CCE1F /* ImmersiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveViewModel.swift; sourceTree = "<group>"; };
+		D432557D2C455DA0008CCE1F /* ModelEntity+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelEntity+Extension.swift"; sourceTree = "<group>"; };
+		D432557F2C455DB0008CCE1F /* HandTrackingCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandTrackingCodeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +76,10 @@
 			children = (
 				D432555D2C455AC2008CCE1F /* AugmenosCodeApp.swift */,
 				D432555F2C455AC2008CCE1F /* ContentView.swift */,
-				D43255612C455AC2008CCE1F /* ImmersiveView.swift */,
+				D43255712C455CB8008CCE1F /* ContentCodeView.swift */,
+				D432556E2C455C5F008CCE1F /* Model3D */,
+				D432556F2C455C76008CCE1F /* HandTrackingProvider */,
+				D43255702C455C8D008CCE1F /* ImmersiveSpace */,
 				D43255632C455AC4008CCE1F /* Assets.xcassets */,
 				D43255682C455AC4008CCE1F /* Info.plist */,
 				D43255652C455AC4008CCE1F /* Preview Content */,
@@ -82,6 +101,35 @@
 				D43255662C455AC4008CCE1F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D432556E2C455C5F008CCE1F /* Model3D */ = {
+			isa = PBXGroup;
+			children = (
+				D43255732C455CC8008CCE1F /* Model3DView.swift */,
+				D43255752C455CE1008CCE1F /* Model3DCodeView.swift */,
+				D43255772C455CF4008CCE1F /* DragRotationModifier.swift */,
+			);
+			path = Model3D;
+			sourceTree = "<group>";
+		};
+		D432556F2C455C76008CCE1F /* HandTrackingProvider */ = {
+			isa = PBXGroup;
+			children = (
+				D43255792C455D15008CCE1F /* HandTrackingView.swift */,
+				D43255612C455AC2008CCE1F /* ImmersiveView.swift */,
+				D432557B2C455D8A008CCE1F /* ImmersiveViewModel.swift */,
+				D432557D2C455DA0008CCE1F /* ModelEntity+Extension.swift */,
+				D432557F2C455DB0008CCE1F /* HandTrackingCodeView.swift */,
+			);
+			path = HandTrackingProvider;
+			sourceTree = "<group>";
+		};
+		D43255702C455C8D008CCE1F /* ImmersiveSpace */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ImmersiveSpace;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,9 +205,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D43255762C455CE1008CCE1F /* Model3DCodeView.swift in Sources */,
+				D43255782C455CF4008CCE1F /* DragRotationModifier.swift in Sources */,
+				D432557A2C455D15008CCE1F /* HandTrackingView.swift in Sources */,
 				D43255602C455AC2008CCE1F /* ContentView.swift in Sources */,
+				D43255722C455CB8008CCE1F /* ContentCodeView.swift in Sources */,
+				D43255742C455CC8008CCE1F /* Model3DView.swift in Sources */,
 				D432555E2C455AC2008CCE1F /* AugmenosCodeApp.swift in Sources */,
+				D432557C2C455D8A008CCE1F /* ImmersiveViewModel.swift in Sources */,
+				D432557E2C455DA0008CCE1F /* ModelEntity+Extension.swift in Sources */,
 				D43255622C455AC2008CCE1F /* ImmersiveView.swift in Sources */,
+				D43255802C455DB0008CCE1F /* HandTrackingCodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +353,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Augmenos Code";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +380,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Augmenos Code";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
