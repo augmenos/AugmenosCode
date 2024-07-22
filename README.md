@@ -10,6 +10,7 @@ Augmenos Code is an educational app that showcases some of visionOS capabilities
 
 - **Model3D**: A view that asynchronously loads and displays a 3D model.
 - **HandTrackingProvider**: A source of live data about the position of a person’s hands and hand joints.
+- **Volume Window**: A volumetric window that loads and displays a 3D model with RealityView.
 - **ImmersiveSpaces**: Coming soon.
 
 ## Getting Started
