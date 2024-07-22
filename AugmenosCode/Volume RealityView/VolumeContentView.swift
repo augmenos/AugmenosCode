@@ -46,7 +46,7 @@ struct VolumeContentView: View {
                 
                 Spacer()
                 
-                Text("Here we have a toggle button that will open the Volume from WindowGroup(id: \"VolumeContent\")")
+                Text("Here we have a toggle button that will open the Volume from WindowGroup(id: \"VolumeContent\"):")
                     .padding(.bottom, 20)
                 
                 HStack(alignment: .center) {
@@ -59,7 +59,7 @@ struct VolumeContentView: View {
                 Spacer()
                 
                 // Footer
-                Text("Learn more about HandTrackingProvider:")
+                Text("Learn more about Volumes and RealityView:")
                     .foregroundStyle(.secondary)
                     .padding(.bottom, 10)
                 

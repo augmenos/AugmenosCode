@@ -15,32 +15,21 @@ struct AugmenosCodeApp: App {
         WindowGroup {
             ContentView()
         }
-        
-        WindowGroup(id: "HandTracking") {
-            HandTrackingView()
+        .defaultSize(width: 1400, height: 800)
+                
+        WindowGroup(id: "Volume") {
+            VolumeView()
         }
+        .windowStyle(.volumetric)
         
         ImmersiveSpace(id: "MixedImmersiveSpace") {
             ImmersiveView()
         }
         .immersionStyle(selection: $immersionState, in: .mixed)
         .upperLimbVisibility(.hidden)
-
-        WindowGroup(id: "Model3D") {
-            Model3DView()
-        }
         
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
         }
-        
-        WindowGroup(id: "VolumeContent") {
-            VolumeContentView()
-        }
-        
-        WindowGroup(id: "Volume") {
-            VolumeView()
-        }
-        .windowStyle(.volumetric)
     }
 }

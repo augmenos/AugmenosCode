@@ -27,18 +27,9 @@ struct HandTrackingView: View {
                     .font(.extraLargeTitle)
                     .padding(.bottom, 30)
                 
-                Text("A source of live data about the position of a person’s hands and hand joints.")
+                Text("A source of live data about the position of a person’s hands and hand joints. This sample also utilizes SceneReconstructionProvider() to receive live data about the shape of a person’s surroundings.")
                     .padding(.bottom, 20)
                                 
-                HStack(alignment: .top, spacing: 30) {
-                    Image(systemName: "exclamationmark.bubble.fill")
-                        .font(.largeTitle)
-                    
-                    Text("HandTrackingProvider requires both a Full Space and user permission with NSHandsTrackingUsageDescription in Info.plist.")
-                        .multilineTextAlignment(.leading)
-                }
-                .padding(.bottom, 20)
-                
                 HStack(alignment: .top, spacing: 30) {
                     Image(systemName: "x.circle.fill")
                         .font(.largeTitle)
@@ -49,6 +40,16 @@ struct HandTrackingView: View {
                         .multilineTextAlignment(.leading)
                 }
                 .padding(.bottom, 20)
+                
+                HStack(alignment: .top, spacing: 30) {
+                    Image(systemName: "exclamationmark.bubble.fill")
+                        .font(.largeTitle)
+                    
+                    Text("HandTrackingProvider requires both a Full Space and user permission with NSHandsTrackingUsageDescription in Info.plist.")
+                        .multilineTextAlignment(.leading)
+                }
+                .padding(.bottom, 20)
+                
                 
                 Spacer()
                 
