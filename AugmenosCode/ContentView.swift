@@ -11,7 +11,7 @@ struct ContentView: View {
     @Environment(\.openURL) var openURL
     @Environment(\.openWindow) private var openWindow
     @Environment(\.dismissWindow) private var dismissWindow
-
+    
     var body: some View {
         
         HStack(spacing: 50) {
@@ -34,16 +34,16 @@ struct ContentView: View {
                     }
                 }
                 .padding(.bottom, 30)
-                                
+                
                 Text("This simple app showcases some of visionOS capabilities with open source code. Experience the samples interactively in-app and view the code alongside them. Intended for developers new to visionOS.")
-                                              
+                
                 Spacer()
-
+                
                 Text("Select sample to begin:")
                     .bold()
                     .frame(maxWidth: .infinity, alignment: .center)
                     .padding(.bottom, 20)
-
+                
                 HStack(spacing: 30) {
                     
                     // Open Model3D Sample
@@ -52,6 +52,28 @@ struct ContentView: View {
                     } label: {
                         Label("Model 3D", systemImage: "rotate.3d.fill")
                     }
+                    
+                    // Open Volume Sample
+                    Button{
+                        openWindow(id: "VolumeContent")
+                    } label: {
+                        Label("Volume", systemImage: "cube.fill")
+                    }
+                    
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+                .padding(.bottom, 20)
+                
+                HStack(spacing: 30) {
+                    
+                    // Open Immersive Space Sample
+                    Button{
+                        openWindow(id: "HandTracking")
+                    } label: {
+                        Label("Immersive Space", systemImage: "visionpro")
+                        
+                    }
+                    .disabled(true)
                     
                     // Open HandTracking Sample
                     Button{
@@ -63,37 +85,22 @@ struct ContentView: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .center)
                 .padding(.bottom, 20)
-
-                
-                // Open Immersive Space Sample
-                Button{
-                    openWindow(id: "HandTracking")
-                } label: {
-                    Label("Immersive Space", systemImage: "visionpro")
-
-                }
-                .disabled(true)
-                .frame(maxWidth: .infinity, alignment: .center)
-
-                Text("Coming Soon")
-                    .font(.footnote)
-                    .foregroundStyle(.secondary)
-                    .frame(maxWidth: .infinity, alignment: .center)
                 
                 Spacer()
                 
-                Text("Complete source code and downloadable project on GitHub:")
+                Text("Learned something new? Please help others find this app by leaving a review! Complete source code on GitHub:")
                     .foregroundStyle(.secondary)
                     .padding(.bottom, 20)
                 
                 HStack(spacing: 30) {
                     
-                    // About Sheet
+                    // Review
                     Button{
-                        if let URL = URL(string: "https://www.augmenos.com/about") {
+                        // IMPORTANT: Don't forget to replace the URL with your app's id! Unle
+                        if let URL = URL(string: "https://apps.apple.com/app/id6544806836?action=write-review") {
                             UIApplication.shared.open(URL, options: [:], completionHandler: nil) }
                     } label: {
-                        Label("About", systemImage: "info.circle.fill")
+                        Label("Review", systemImage: "star.fill")
                             .foregroundStyle(.secondary)
                     }
                     
@@ -108,7 +115,10 @@ struct ContentView: View {
                     
                 }
                 .frame(maxWidth: .infinity, alignment: .center)
-
+                .padding(.bottom, 20)
+                
+                CopyrightView()
+                
             }
             .frame(maxWidth: 500)
             .padding()
@@ -122,8 +132,38 @@ struct ContentView: View {
             .padding(30)
             .background(.thickMaterial)
             .cornerRadius(30)
-
+            
         }
         .padding(40)
+    }
+}
+
+struct CopyrightView: View {
+    @Environment(\.openURL) var openURL
+
+    var body: some View {
+        HStack(alignment: .center, spacing: 0) {
+            Spacer()
+            Text("MIT License.")
+                .foregroundColor(.secondary)
+            
+            Button {
+                if let URL = URL(string: "https://www.augmenos.com/") {
+                    UIApplication.shared.open(URL, options: [:], completionHandler: nil) }
+            } label: {
+                Text("Augmenos")
+                    .foregroundColor(.orange)
+                    .padding(.vertical, 5)
+                    .padding(.horizontal, 10)
+            }
+            .buttonStyle(.plain)
+            
+            Text("© 2024")
+                .foregroundColor(.secondary)
+            
+            Spacer()
+        }
+        .frame(alignment: .center)
+        .multilineTextAlignment(.center)
     }
 }

@@ -42,8 +42,10 @@ struct HandTrackingView: View {
                 HStack(alignment: .top, spacing: 30) {
                     Image(systemName: "x.circle.fill")
                         .font(.largeTitle)
+                        .symbolRenderingMode(.palette)
+                        .foregroundStyle(.white, .red)
                     
-                    Text("Warning: HandTrackingProvider will not work on the simulator. The app will crash!")
+                    Text("Warning: HandTrackingProvider will not work on the visionOS simulator. The app will crash!")
                         .multilineTextAlignment(.leading)
                 }
                 .padding(.bottom, 20)

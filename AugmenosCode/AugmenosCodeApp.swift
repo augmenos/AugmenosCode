@@ -33,5 +33,14 @@ struct AugmenosCodeApp: App {
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
         }
+        
+        WindowGroup(id: "VolumeContent") {
+            VolumeContentView()
+        }
+        
+        WindowGroup(id: "Volume") {
+            VolumeView()
+        }
+        .windowStyle(.volumetric)
     }
 }
