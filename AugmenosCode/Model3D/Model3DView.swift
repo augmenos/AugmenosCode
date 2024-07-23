@@ -40,13 +40,14 @@ struct Model3DView: View {
                 
                 HStack(alignment: .center) {
                     
+                    // Create the Model3D with usda file named "Heart" from the RealityKitContent.
                     // "Human Heart" by sv1nks is licensed under Creative Commons Attribution.
                     Model3D(named: "Heart", bundle: realityKitContentBundle) { model in
                         model
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 150, height: 150)
-                            .dragRotation()
+                            .dragRotation() // Custom modifier from Apple, see DragRotationModifier.
                     } placeholder: {
                         ProgressView()
                     }
