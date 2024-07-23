@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4086ADC2C4EBD2E00B74686 /* VolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4086ADB2C4EBD2E00B74686 /* VolumeView.swift */; };
+		D4086ADE2C4EBFA500B74686 /* VolumeCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4086ADD2C4EBFA500B74686 /* VolumeCodeView.swift */; };
+		D4086AE02C4EBFF300B74686 /* VolumeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4086ADF2C4EBFF300B74686 /* VolumeContentView.swift */; };
 		D432555C2C455AC2008CCE1F /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = D432555B2C455AC2008CCE1F /* RealityKitContent */; };
 		D432555E2C455AC2008CCE1F /* AugmenosCodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432555D2C455AC2008CCE1F /* AugmenosCodeApp.swift */; };
 		D43255602C455AC2008CCE1F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432555F2C455AC2008CCE1F /* ContentView.swift */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D4086ADB2C4EBD2E00B74686 /* VolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeView.swift; sourceTree = "<group>"; };
+		D4086ADD2C4EBFA500B74686 /* VolumeCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeCodeView.swift; sourceTree = "<group>"; };
+		D4086ADF2C4EBFF300B74686 /* VolumeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeContentView.swift; sourceTree = "<group>"; };
 		D43255562C455AC2008CCE1F /* AugmenosCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AugmenosCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D432555A2C455AC2008CCE1F /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		D432555D2C455AC2008CCE1F /* AugmenosCodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmenosCodeApp.swift; sourceTree = "<group>"; };
@@ -54,6 +60,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D4086ADA2C4EBCF100B74686 /* Volume RealityView */ = {
+			isa = PBXGroup;
+			children = (
+				D4086ADF2C4EBFF300B74686 /* VolumeContentView.swift */,
+				D4086ADB2C4EBD2E00B74686 /* VolumeView.swift */,
+				D4086ADD2C4EBFA500B74686 /* VolumeCodeView.swift */,
+			);
+			path = "Volume RealityView";
+			sourceTree = "<group>";
+		};
 		D432554D2C455AC2008CCE1F = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +96,7 @@
 				D432556E2C455C5F008CCE1F /* Model3D */,
 				D432556F2C455C76008CCE1F /* HandTrackingProvider */,
 				D43255702C455C8D008CCE1F /* ImmersiveSpace */,
+				D4086ADA2C4EBCF100B74686 /* Volume RealityView */,
 				D43255632C455AC4008CCE1F /* Assets.xcassets */,
 				D43255682C455AC4008CCE1F /* Info.plist */,
 				D43255652C455AC4008CCE1F /* Preview Content */,
@@ -207,6 +224,7 @@
 			files = (
 				D43255762C455CE1008CCE1F /* Model3DCodeView.swift in Sources */,
 				D43255782C455CF4008CCE1F /* DragRotationModifier.swift in Sources */,
+				D4086AE02C4EBFF300B74686 /* VolumeContentView.swift in Sources */,
 				D432557A2C455D15008CCE1F /* HandTrackingView.swift in Sources */,
 				D43255602C455AC2008CCE1F /* ContentView.swift in Sources */,
 				D43255722C455CB8008CCE1F /* ContentCodeView.swift in Sources */,
@@ -215,7 +233,9 @@
 				D432557C2C455D8A008CCE1F /* ImmersiveViewModel.swift in Sources */,
 				D432557E2C455DA0008CCE1F /* ModelEntity+Extension.swift in Sources */,
 				D43255622C455AC2008CCE1F /* ImmersiveView.swift in Sources */,
+				D4086ADC2C4EBD2E00B74686 /* VolumeView.swift in Sources */,
 				D43255802C455DB0008CCE1F /* HandTrackingCodeView.swift in Sources */,
+				D4086ADE2C4EBFA500B74686 /* VolumeCodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +378,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.augmenos.AugmenosCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";
@@ -385,7 +405,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.augmenos.AugmenosCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";

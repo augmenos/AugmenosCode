@@ -27,9 +27,20 @@ struct HandTrackingView: View {
                     .font(.extraLargeTitle)
                     .padding(.bottom, 30)
                 
-                Text("A source of live data about the position of a person’s hands and hand joints.")
+                Text("A source of live data about the position of a person’s hands and hand joints. This sample also utilizes SceneReconstructionProvider() to receive live data about the shape of a person’s surroundings.")
                     .padding(.bottom, 20)
                                 
+                HStack(alignment: .top, spacing: 30) {
+                    Image(systemName: "x.circle.fill")
+                        .font(.largeTitle)
+                        .symbolRenderingMode(.palette)
+                        .foregroundStyle(.white, .red)
+                    
+                    Text("Warning: HandTrackingProvider will not work on the visionOS simulator. The app will crash!")
+                        .multilineTextAlignment(.leading)
+                }
+                .padding(.bottom, 20)
+                
                 HStack(alignment: .top, spacing: 30) {
                     Image(systemName: "exclamationmark.bubble.fill")
                         .font(.largeTitle)
@@ -39,14 +50,6 @@ struct HandTrackingView: View {
                 }
                 .padding(.bottom, 20)
                 
-                HStack(alignment: .top, spacing: 30) {
-                    Image(systemName: "x.circle.fill")
-                        .font(.largeTitle)
-                    
-                    Text("Warning: HandTrackingProvider will not work on the simulator. The app will crash!")
-                        .multilineTextAlignment(.leading)
-                }
-                .padding(.bottom, 20)
                 
                 Spacer()
                 
