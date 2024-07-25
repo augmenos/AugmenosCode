@@ -6,6 +6,8 @@ Augmenos Code is an educational app that showcases some of visionOS capabilities
 
 [Download](https://apps.apple.com/app/augmenos-code/id6544806836) on the App Store or the Xcode project in this repository.
 
+Created by [Miguel Garcia Gonzalez](https://github.com/miggiegg).
+
 ## Frameworks
 
 - **Model3D**: A view that asynchronously loads and displays a 3D model.
